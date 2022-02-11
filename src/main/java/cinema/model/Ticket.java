@@ -1,18 +1,19 @@
 package cinema.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-@Table(name = "tickets")
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private MovieSession movieSession;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private User user;
 
     public Long getId() {
@@ -23,14 +24,6 @@ public class Ticket {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public MovieSession getMovieSession() {
         return movieSession;
     }
@@ -39,11 +32,19 @@ public class Ticket {
         this.movieSession = movieSession;
     }
 
-    @Override
-    public String toString() {
-        return "Ticket{" + "id=" + id
-              + ", movieSession=" + movieSession
-              + ", user=" + user + '}';
+    public User getUser() {
+        return user;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{"
+                + "id=" + id
+                + ", movieSession=" + movieSession
+                + ", user=" + user + '}';
+    }
 }
