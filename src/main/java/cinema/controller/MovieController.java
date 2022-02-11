@@ -5,11 +5,14 @@ import cinema.dto.response.MovieResponseDto;
 import cinema.model.Movie;
 import cinema.service.MovieService;
 import cinema.service.mapper.MovieMapper;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.validation.Valid;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/movies")

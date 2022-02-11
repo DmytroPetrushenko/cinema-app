@@ -3,9 +3,8 @@ package cinema.service.mapper;
 import cinema.dto.response.ShoppingCartResponseDto;
 import cinema.model.ShoppingCart;
 import cinema.model.Ticket;
-import org.springframework.stereotype.Component;
-
 import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
 
 @Component
 public class ShoppingCartMapper implements

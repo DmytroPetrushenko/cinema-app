@@ -4,10 +4,9 @@ import cinema.dao.UserDao;
 import cinema.exception.DataProcessingException;
 import cinema.model.User;
 import cinema.service.UserService;
+import java.util.Optional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {

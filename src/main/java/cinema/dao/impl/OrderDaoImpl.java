@@ -5,12 +5,11 @@ import cinema.dao.OrderDao;
 import cinema.exception.DataProcessingException;
 import cinema.model.Order;
 import cinema.model.User;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public class OrderDaoImpl extends AbstractDao<Order> implements OrderDao {

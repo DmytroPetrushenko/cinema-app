@@ -1,13 +1,12 @@
 package cinema.service.impl;
 
 import cinema.dao.MovieSessionDao;
-import cinema.service.MovieSessionService;
 import cinema.exception.DataProcessingException;
 import cinema.model.MovieSession;
-import org.springframework.stereotype.Service;
-
+import cinema.service.MovieSessionService;
 import java.time.LocalDate;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class MovieSessionServiceImpl implements MovieSessionService {

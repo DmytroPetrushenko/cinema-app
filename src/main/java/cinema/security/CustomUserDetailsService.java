@@ -3,13 +3,12 @@ package cinema.security;
 import cinema.model.Role;
 import cinema.model.User;
 import cinema.service.UserService;
+import java.util.Optional;
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-
-import java.util.Optional;
 
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
