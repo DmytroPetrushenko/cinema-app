@@ -4,19 +4,15 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "movie_sessions")
 public class MovieSession {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Movie movie;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private CinemaHall cinemaHall;
     private LocalDateTime showTime;
-
-    public MovieSession() {
-    }
 
     public Long getId() {
         return id;
@@ -56,7 +52,6 @@ public class MovieSession {
                 + "id=" + id
                 + ", movie=" + movie
                 + ", cinemaHall=" + cinemaHall
-                + ", showTime=" + showTime
-                + '}';
+                + ", showTime=" + showTime + '}';
     }
 }

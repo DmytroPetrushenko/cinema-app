@@ -8,5 +8,5 @@ import java.util.List;
 public interface OrderDao {
     Order add(Order order);
 
-    List<Order> getOrderHistory(User user);
+    List<Order> getOrdersHistory(User user);
 }
